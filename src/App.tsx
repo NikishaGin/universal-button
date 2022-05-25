@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Button} from "./Component/Button";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const Callback1 = (name: string) => {
+        console.log(name)
+    }
+
+    const Callback2 = (name: string) => {
+        console.log(name)
+    }
+
+    return (
+        <div className="App">
+            <Button name={'MyYouTubeChannel-1'} Callback={() => Callback1('Hello')}/>
+            <Button name={'MyYouTubeChannel-2'} Callback={() => Callback2('Bye')}/>
+        </div>
+    );
 }
 
 export default App;
